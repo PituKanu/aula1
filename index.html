@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Maridão conecta você a profissionais da sua região para serviços residenciais agendáveis.">
+<meta name="theme-color" content="#f8f8f2">
+<title>Maridão | Reparos residenciais</title>
+<style>
+:root{--ink:#142a23;--muted:#475d52;--green:#145741;--deep:#0e3b2a;--lime:#d9f678;--line:#dbe3d9;--paper:#f8f8f2;--white:#fff;--radius:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}button,a,input,select{touch-action:manipulation}:focus-visible{outline:3px solid #408c5c;outline-offset:4px}[hidden]{display:none!important}
+.wrap{width:min(1180px,calc(100% - 64px));margin-inline:auto}.skip{position:absolute;left:16px;top:-80px;background:white;padding:12px;z-index:5}.skip:focus{top:16px}
+header{border-bottom:1px solid var(--line)}.bar{min-height:84px;display:flex;justify-content:space-between;align-items:center;gap:24px}.brand{display:inline-flex;align-items:center;gap:10px;font-size:25px;letter-spacing:-.05em;font-weight:800}.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;color:var(--deep);background:var(--lime);font-size:25px;line-height:1}.nav{display:flex;align-items:center;gap:32px;color:var(--muted);font-weight:600}.nav a:hover,.foot a:hover{text-decoration:underline}.pill{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:1px solid var(--line);border-radius:99px;font-weight:700}
+.hero{padding-block:58px 54px;display:grid;grid-template-columns:1fr 1.02fr;align-items:center;gap:48px}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--green);font-weight:750;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}.eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
+h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.05;letter-spacing:-.05em}h1{font-size:clamp(3rem,6vw,5.45rem);margin:19px 0 23px;font-weight:800}h1 span{color:var(--green)}.intro{font-size:1.14rem;color:var(--muted);max-width:460px}
+.hero-media{margin:0;position:relative;min-width:0}.hero-media img{width:100%;height:auto;aspect-ratio:1.12;object-fit:cover;display:block;border-radius:32px}.media-card{position:absolute;bottom:20px;right:20px;display:flex;gap:13px;align-items:center;border-radius:18px;padding:12px 17px;background:var(--white);box-shadow:0 8px 24px #142a2330}.media-card span{display:block;color:var(--muted);font-size:.86rem}.media-card i{font-style:normal;font-size:1.3rem;background:var(--lime);display:grid;place-items:center;width:39px;height:39px;border-radius:12px}
+.search{display:grid;grid-template-columns:1fr .9fr auto;gap:8px;align-items:end;background:var(--white);padding:10px;border:1px solid var(--line);border-radius:17px;margin-top:27px;box-shadow:0 10px 28px #143d2c0c}
+.field{min-width:0;display:grid;gap:3px;padding-inline:8px}.field span{font-size:.85rem;font-weight:750}.field input,.field select{width:100%;height:40px;color:var(--ink);border:1px solid var(--line);border-radius:9px;padding-inline:8px;background:#fff}.field select{appearance:none;padding-right:25px;background:linear-gradient(45deg,transparent 50%,var(--green) 50%) right 13px center/5px 5px no-repeat,linear-gradient(135deg,var(--green) 50%,transparent 50%) right 8px center/5px 5px no-repeat,#fff}.field input::placeholder{color:#64786c}
+.button{border:0;min-height:44px;border-radius:12px;padding:0 17px;background:var(--green);color:white;font-weight:750}.button:hover{background:var(--deep)}.note{margin-top:11px;font-size:.86rem;color:var(--muted)}.result{margin-top:14px;padding:14px 16px;background:#e9f1e6;border-radius:12px;color:var(--deep)}
+.section{padding-block:60px}.services{border-top:1px solid var(--line);background:white}.section h2{font-size:clamp(2.2rem,4vw,3.45rem);margin:12px 0 25px}.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.tile{display:flex;align-items:center;gap:12px;min-height:70px;padding:12px 14px;border-radius:15px;background:var(--paper);border:1px solid var(--line);color:var(--ink);font-weight:700;text-align:left}.tile:hover,.tile[aria-pressed=true]{background:#edf5d8;border-color:#9fbb87}.tile .icon{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:#e7efe6;color:var(--green)}.icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:24px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)}.step b{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--lime);margin-bottom:16px}.step h3{font-size:1.37rem;margin-bottom:9px}.step p,.partner p{color:var(--muted)}
+.partner{display:grid;grid-template-columns:1.08fr 1fr;gap:40px;align-items:center;padding:42px;border-radius:var(--radius);background:var(--deep);color:#fff;margin-bottom:58px}.partner h2{font-size:clamp(2rem,4vw,3.2rem);max-width:480px;margin-bottom:13px}.partner p{color:#d6e7dc}.partner details{border:1px solid #709584;border-radius:15px;padding:15px 19px}.partner summary{cursor:pointer;font-weight:750;color:var(--lime)}.partner details p{margin-top:9px}.foot{border-top:1px solid var(--line);padding-block:23px}.foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}.foot p{color:var(--muted);font-size:.88rem}
+@media(max-width:1000px){.hero{gap:28px}.search{grid-template-columns:1fr 1fr}.search .button{grid-column:1/-1}.tiles{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.wrap{width:calc(100% - 36px)}.bar{min-height:68px}.nav{display:none}.bar .pill{padding-inline:12px;min-height:40px;font-size:.87rem}.hero{grid-template-columns:1fr;padding-block:36px;gap:27px}.hero-media img{aspect-ratio:1.37}.section{padding-block:42px}.tiles{grid-template-columns:1fr 1fr}.steps,.partner{grid-template-columns:1fr}.partner{padding:25px;gap:22px}.foot .wrap{align-items:flex-start;flex-direction:column;gap:10px}}
+@media(max-width:365px){.tiles,.search{grid-template-columns:1fr}.field{padding:0}.media-card{bottom:10px;right:10px}.brand{font-size:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+<header id="inicio"><div class="wrap bar">
+<a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">⌂</span>Maridão</a>
+<nav class="nav" aria-label="Principal"><a href="#servicos">Serviços</a><a href="#como-funciona">Como funciona</a></nav>
+<a class="pill" href="#parceiros">Sou profissional</a>
+</div></header>
+<main id="principal">
+<section class="wrap hero" aria-labelledby="titulo">
+<div>
+<p class="eyebrow">Serviços residenciais</p>
+<h1 id="titulo">Seu reparo,<br><span>no seu horário.</span></h1>
+<p class="intro">Encontre profissionais da sua região para pequenos reparos. Compare horários e orçamentos antes de agendar.</p>
+<form id="busca" class="search" aria-describedby="modo">
+<label class="field"><span>Qual serviço?</span><select id="servico" required><option value="">Selecione</option></select></label>
+<label class="field"><span>Onde?</span><input id="regiao" placeholder="Bairro ou CEP" required maxlength="80"></label>
+<button class="button">Buscar</button>
+</form>
+<p class="note" id="modo">Protótipo demonstrativo</p>
+<div class="result" id="resultado" role="status" hidden></div>
+</div>
+<figure class="hero-media">
+<img src="reparo-residencial.webp" width="1200" height="900" alt="Profissional usando uma chave para ajustar a torneira de uma cozinha" fetchpriority="high">
+<figcaption class="media-card"><i aria-hidden="true">✓</i><div><strong>Reparos agendáveis</strong><span>Escolha uma janela de visita</span></div></figcaption>
+</figure>
+</section>
+<section class="services section" id="servicos" aria-labelledby="titulo-servicos"><div class="wrap">
+<p class="eyebrow">Categorias</p><h2 id="titulo-servicos">O que precisa resolver?</h2>
+<div class="tiles" id="categorias"></div>
+</div></section>
+<section class="wrap section" id="como-funciona" aria-labelledby="titulo-como">
+<h2 id="titulo-como">Como funciona</h2>
+<div class="steps">
+<article class="step"><b aria-hidden="true">1</b><h3>Conte o que precisa</h3><p>Escolha o tipo de serviço e informe onde será o atendimento.</p></article>
+<article class="step"><b aria-hidden="true">2</b><h3>Compare as opções</h3><p>Confira avaliações, disponibilidade e orçamento. Veja se há taxa de visita antes de confirmar.</p></article>
+<article class="step"><b aria-hidden="true">3</b><h3>Agende a visita</h3><p>Combine o melhor horário com o profissional. Depois do serviço, pague e avalie pela plataforma.</p></article>
+</div>
+</section>
+<section class="wrap partner" id="parceiros" aria-labelledby="titulo-parceiros">
+<div><h2 id="titulo-parceiros">Trabalha com serviços residenciais?</h2><p>Divulgue sua especialidade e receba pedidos de moradores da sua região.</p></div>
+<details><summary>Como funciona a parceria</summary><p>O cadastro é gratuito. O modelo prevê comissão de 10% sobre cada serviço concluído e pago pela plataforma.</p></details>
+</section>
+</main>
+<footer class="foot"><div class="wrap">
+<a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">⌂</span>Maridão</a><p>Contratação de serviços residenciais</p>
+</div></footer>
+<script>
+const categories = [
+  ['Encanamento', 'M5 3v7a3 3 0 0 0 3 3h6a2 2 0 0 1 2 2v6m-7-18v6h6a5 5 0 0 1 5 5v7M3 3h8m3 18h8'],
+  ['Elétrica', 'm13 2-9 12h7l-1 8 10-12h-7l1-8Z'],
+  ['Pintura', 'M4 3h13v6H4zM17 6h3v6h-8v3m-2 0h4v7h-4z'],
+  ['Alvenaria', 'M3 5h18v14H3zM3 12h18M9 5v7m6 0v7'],
+  ['Montagem de móveis', 'M4 4h16v15H4zm0 8h16M7 19v2m10-2v2M10 8h4m-4 8h4'],
+  ['Jardinagem', 'M20 4c-9 0-14 4-14 10a5 5 0 0 0 5 5c6 0 10-5 9-15ZM4 21 15 10'],
+  ['Ar-condicionado', 'M3 4h18v10H3zM6 10h12m-9 7v3m3-3v5m3-5v3'],
+  ['Limpeza', 'm14 3-4 10m-1 0 5 2-1 7-8-3 4-6Zm10-9v4m-2-2h4'],
+];
+const form = document.querySelector('#busca');
+const service = document.querySelector('#servico');
+const region = document.querySelector('#regiao');
+const result = document.querySelector('#resultado');
+const categoryList = document.querySelector('#categorias');
+
+function updateSelection() {
+  for (const button of categoryList.querySelectorAll('button')) {
+    button.setAttribute('aria-pressed', String(button.dataset.category === service.value));
+  }
+  result.hidden = true;
+}
+
+for (const [name, path] of categories) {
+  service.add(new Option(name, name));
+  const button = document.createElement('button');
+  button.className = 'tile';
+  button.type = 'button';
+  button.dataset.category = name;
+  button.setAttribute('aria-pressed', 'false');
+  button.innerHTML = '<span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="' + path + '"></path></svg></span>';
+  button.append(document.createTextNode(name));
+  button.addEventListener('click', () => {
+    service.value = name;
+    updateSelection();
+    region.focus();
+  });
+  categoryList.append(button);
+}
+
+service.addEventListener('change', updateSelection);
+region.addEventListener('input', () => {
+  region.setCustomValidity('');
+  result.hidden = true;
+});
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const location = region.value.trim();
+  if (!location) {
+    region.setCustomValidity('Informe um bairro ou CEP.');
+    region.reportValidity();
+    return;
+  }
+  result.textContent = 'Busca simulada para ' + service.value + ' em ' + location + '. O protótipo ainda não consulta profissionais.';
+  result.hidden = false;
+});
+</script>
+</body>
+</html>
+
